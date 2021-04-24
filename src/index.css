@@ -1,3 +1,29 @@
 @import 'tailwindcss/dist/base.css';
 @import 'tailwindcss/dist/components.css';
 @import 'tailwindcss/dist/utilities.css';
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, 
+                rgba(2,0,36,1) 0%,   
+                rgba(0,212,255,1) 0%, 
+                rgba(211,248,255,1) 35%, 
+                rgba(194,245,255,1) 65%, 
+                rgba(0,212,255,1) 100%);
+}
+
+.weather-card {
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba(0, 213, 255, 0.692);
+    backdrop-filter: blur( 9.0px );
+    -webkit-backdrop-filter: blur( 9.0px );
+    border-radius: 10px;
+    width: 50vw;
+    height: 300px;
+}
