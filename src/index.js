@@ -54,8 +54,12 @@ const createCard = (data) => {
   flag.appendChild(img)
   /* */
   const status = document.createElement('span')
-  status.className = 'text-2xl'
-  status.innerText = data.weather[0].main
+  status.className = 'flex flex-col justify-center'
+  //status.innerText = data.weather[0].main
+  const statusImg = document.createElement('img')
+  statusImg.className = 'w-12 sm:w-20 lg:w-28 mx-auto'
+  statusImg.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`
+  status.appendChild(statusImg)
   /* */
   const temperatureContainer = document.createElement('div')
   temperatureContainer.className = 'text-3xl sm:text-5xl lg:text-7xl'
@@ -72,7 +76,7 @@ const createCard = (data) => {
   s2.className = 'flex flex-col w-3/6 justify-center'
   /* */
   const city = document.createElement('span')
-  city.className = 'sm:text-3xl md:text-5xl lg:text-7xl text-xl'
+  city.className = 'sm:text-3xl md:text-5xl lg:text-6xl text-xl'
   city.innerText = data.name
   /* */
   const container = document.createElement('div')
