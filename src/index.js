@@ -4,8 +4,10 @@ console.log('Happy hacking :)')
 
 const submit = document.querySelector('.submit')
 const card = document.querySelector('.weather')
+const city = document.querySelector('#city')
 
 const KEY = '5a01a3bb7202abb5baa380ccf47903be'
+const ENTER = 13
 
 const getData = (city) => {
     const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${KEY}`
@@ -57,3 +59,11 @@ const getCity = () => {
 }
 
 submit.addEventListener('click', getCity)
+
+const enterPressed = evt => {
+  if (evt.keyCode === ENTER) {
+    getCity()
+  }
+}
+
+city.addEventListener('keyup', enterPressed)
